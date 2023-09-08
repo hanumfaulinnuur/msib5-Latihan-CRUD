@@ -28,7 +28,7 @@ if (isset($_POST['update'])) {
     $query = mysqli_query($mysqli,
     "UPDATE mahasiswa SET nim='$nim', nama='$nama', jurusan='$jurusan', prodi='$prodi', semester='$semester', alamat='$alamat' WHERE id='$id' ");
 
-    header('Location: home.php');
+    echo "<script>alert('data berhasil dirubah');window.location='home.php';</script>";
 }
 
     
@@ -47,7 +47,7 @@ if (isset($_POST['update'])) {
 </head>
 
 <body>
-    <div class="container mt-4">
+    <div class="container mt-5">
         <div class="card p-5 shadow-lg p-3 mb-4 bg-body-tertiary rounded">
             <h3>Edit Data Mahasiswa</h3>
             <hr>
@@ -70,14 +70,28 @@ if (isset($_POST['update'])) {
                     <div class="row mb-3">
                         <label for="inputText" class="col-sm-2 col-form-label">Jurusan</label>
                         <div class="col-sm-10">
-                            <input type="text" name="jurusan" value="<?= $jurusan ?>" class="form-control" >
+                        <select class="form-select" aria-label="Default select example" name="jurusan" value="<?= $jurusan ?>">
+                        <option selected>Pilih Jurusan</option>
+                        <option <?= ($jurusan == 'Pariwisata') ? "selected": "" ?>>Pariwisata</option>
+                        <option <?= ($jurusan == 'Bisnis dan Informatika') ? "selected": "" ?>>Bisnis dan Informatika</option>
+                        <option <?= ($jurusan == 'Pertanian') ? "selected": "" ?>>Pertanian</option>
+                        <option <?= ($jurusan == 'Teknologi Hasil Pertanian') ? "selected": "" ?>>Teknologi Hasil Pertanian</option>
+                        </select>
                         </div>
                     </div>
 
                     <div class="row mb-3">
                         <label for="inputText" class="col-sm-2 col-form-label">Program Studi</label>
                         <div class="col-sm-10">
-                            <input type="text" name="prodi" value="<?= $prodi ?>" class="form-control" >
+                        <select class="form-select" aria-label="Default select example" name="prodi" value="<?= $prodi ?>">
+                        <option selected>Pilih Program Studi</option>
+                        <option <?= ($prodi == 'Teknologi Rekayasa Perangkat Lunak') ? "selected": "" ?>>Teknologi Rekayasa Perangkat Lunak</option>
+                        <option <?= ($prodi == 'Teknologi Rekayasa Komputer') ? "selected": "" ?>>Teknologi Rekayasa Komputer</option>
+                        <option <?= ($prodi == 'Agribisnis') ? "selected": "" ?>>Agribisnis</option>
+                        <option <?= ($prodi == 'Agroteknologi') ? "selected": "" ?>>Agroteknologi</option>
+                        <option <?= ($prodi == 'Teknologi Pangan Hasil Pertanian') ? "selected": "" ?>>Teknologi Pangan Hasil Pertanian</option>
+                        <option <?= ($prodi == 'Destinasi Pariwisata') ? "selected": "" ?>>Destinasi Pariwisata</option>
+                        </select>
                         </div>
                     </div>
 

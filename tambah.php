@@ -31,7 +31,7 @@ include_once("db/koneksi.php");
 </head>
 
 <body>
-    <div class="container mt-4">
+    <div class="container mt-5">
         <div class="card p-5 shadow-lg p-3 mb-4 bg-body-tertiary rounded">
             <h3>Tambah Data Mahasiswa</h3>
             <hr>
@@ -54,14 +54,28 @@ include_once("db/koneksi.php");
                     <div class="row mb-3">
                         <label for="inputText" class="col-sm-2 col-form-label">Jurusan</label>
                         <div class="col-sm-10">
-                            <input type="text" name="jurusan" class="form-control" required>
+                        <select class="form-select" aria-label="Default select example" name="jurusan" required>
+                        <option selected>Pilih Jurusan</option>
+                        <option value="Pariwisata">Pariwisata</option>
+                        <option value="Bisnis dan Informatika">Bisnis dan Informatika</option>
+                        <option value="Pertanian">Pertanian</option>
+                        <option value="Teknologi Hasil Pertanian">Teknologi Hasil Pertanian</option>
+                        </select>
                         </div>
                     </div>
 
                     <div class="row mb-3">
                         <label for="inputText" class="col-sm-2 col-form-label">Program Studi</label>
                         <div class="col-sm-10">
-                            <input type="text" name="prodi"  class="form-control" required>
+                        <select class="form-select" aria-label="Default select example" name="prodi" required>
+                        <option selected>Pilih Program Studi</option>
+                        <option value="Teknologi Rekayasa Perangkat Lunak">Teknologi Rekayasa Perangkat Lunak</option>
+                        <option value="Teknologi Rekayasa Komputer">Teknologi Rekayasa Komputer</option>
+                        <option value="Agribisnis">Agribisnis</option>
+                        <option value="Agroteknologi">Agroteknologi</option>
+                        <option value="Teknologi Pangan Hasil Pertanian">Teknologi Pangan Hasil Pertanian</option>
+                        <option value="Destinasi Pariwisata">Destinasi Pariwisata</option>
+                        </select>
                         </div>
                     </div>
 
