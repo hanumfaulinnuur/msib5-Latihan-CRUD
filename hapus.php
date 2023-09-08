@@ -7,6 +7,6 @@
     $delete = mysqli_query($mysqli, "DELETE FROM mahasiswa WHERE id='$id'");
     echo "
     <script>
-    alert('data tidak jadi dihapus');window.location='home.php';
+    alert('Data Berhasil Dihapus');window.location='home.php';
     </script>";
 ?>
